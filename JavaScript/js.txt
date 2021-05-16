@@ -1,0 +1,90 @@
+JavaScript is a programming language that deals with the interactivity and behaviour of the websites.
+
+JavaScript runs or executes the code inside the web browser which acts as a host.
+
+JavaScript is case sensitive.
+
+JavaScript can be used along with html with the help of script tag.
+
+Internally JavaScript can be embedded with HTML as follows:
+      <script>alert("Hello,World")</script>
+
+Externally JavaScript can be embedded with HTML as follows:
+      <script src="script.js"></script>
+
+      where script.js is a another file containing JavaScript code.
+
+JavaScript "script" tag can be placed either inside the head or body tag.
+    When JavaScript placed inside head tag,at first JavaScript code gets executed and then the content of webpage will be dislayed.
+
+    But when placed inside body tag,the content webpage will be dislayed first and then the JavaScript code gets executed.
+
+JavaScript comments:
+    //Single Line Comment
+    /*Multi Line Comment
+          Hello,Iam Learning JavaScript*/
+
+JavaScript Datatypes:
+    String Ex."Hello"
+    Number Ex.1,2,3
+    Boolean Ex.2>1 //True or False
+    Array Ex.fruits=["apple","Mango","pear"]
+    Null Ex.email="null" //null means value does not exist.
+
+JavaScript Operators:
+    Arithmetic Operators:
+        +   => addition(when used for numbers) or concatenation(when    used for strings)
+        -   => Subtraction
+        *   => Multiplication
+        /   => Division
+        %   => Modulus/Remainder
+        =   => Assignment Operator
+    
+    Comparison Operators:
+        ==  => Equal to
+        !=  => Not Equal to
+        >   => Greater than
+        <   => Lesser than
+        >=  => Greater than or Equal to
+        <=  => Lesser than or Equal to
+
+JavaScript Variables:
+    Variables are containers that are used to store values.
+    variables are created or declared using keyword "var"Ex.
+
+    Rules to follow:
+        1.Variable names are case sensitive. ex. x and X are not same.
+        2.You cannot begin a variable name with a number. ex.var 24cash
+        3.JavaScript variable names must not have spaces between them. ex.fastCars is correct whereas fast Cars is a wrong declaration.
+        4.JavaScript keywords cannot be used to name variables. ex.alert,prompt should not be used.
+        5.Variable without a value is undefined.Also values can be changed once set.
+
+JavaScript Conditional Statements:
+    Test whether the condition is true or false.
+    ex. if(condition){
+            //this part is executed when condition is true.
+        }
+        else{
+            //this part is executed when condition is false.
+        }
+
+JavaScript Functions:
+      Functions are a block of code created to perform a task when it is invoked or called.
+      Built in function - alert()
+      ex. function function_name(parameter1,parameter2,.....){
+        //code is written here
+      }
+
+JavaScript Events:
+      Events are code that listen out for the things happening to the web browser and then responds.
+          ex. when a button is clicked and then it responds for us.
+
+Concatenation:
+  Used to add strings or text together.
+
+
+
+
+
+
+
