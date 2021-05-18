@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <script type="text/babel">
+        var nameFunc = function foo(firstName = "Hema", lastName = "Priya") { 
+            console.log(firstName + " " + lastName);
+        }; 
+        nameFunc(); 
+        
+        var x=34; 
+        if(x){ 
+            var x=90;
+        } 
+        console.log(x);//by using var keyword
+        
+        var x=34;
+        if(x){
+            let x=90;
+        } 
+        console.log(x);//by using let keyword 
+        
+        for(var i=0;i<13;i++){
+            var div=document.createElement("div");
+            div.onclick=function(){
+                alert("You clicked on the box "+i);
+            }
+            document.getElementsByTagName("section")[0].appendChild(div);
+        }//whenever you click any of the boxes it will show an alert as "You clicked on the box 13".This is all because of var keyword used inside for loop.
+
+        for(let i=14;i<27;i++){
+            var div=document.createElement("div");
+            div.onclick=function(){
+                alert("You clicked on the box "+i);
+            }
+            document.getElementsByTagName("section")[0].appendChild(div);
+        }//Here after the 13 th box when you click any other boxes it will give alert message as "You clicked on the box i (i.e i=14 to i=27)".This is because of let keyword
+    </script>
+
+    <header>
+        <h1>Click on any of the Boxes</h1>
+    </header>
+
+    <section></section>
+</body>
+
+</html>

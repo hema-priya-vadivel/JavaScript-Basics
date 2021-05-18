@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <script type="text/babel">
+    const birthYr=2002;//const keyword does'nt let you to change the value.
+    var currYr=2021;
+    var age=currYr-birthYr;
+    console.log(age);
+
+    function temp(currTemp) {
+      const freezeTemp=30 ;
+      if(freezeTemp<=currTemp){
+        console.log(currTemp+" above freezing point.");
+      }
+      else{
+        console.log(currTemp+" below freezing point.");
+      }
+    }
+    temp(67);
+    temp(23);
+    temp(56); 
+    
+    
+    //destructuring
+    var [first,,third]=["chennai","mumbai","delhi"];
+    console.log(first,third);
+
+    var vacation={
+      place:"Bangalore",
+      travellers:2,
+      cost:9000,
+      touristplace:"Wonderla"
+    };
+
+    function vacationTime({place,touristplace}){
+      return `lets go to ${touristplace} which is in ${place}`;
+    }
+    console.log(vacationTime(vacation));
+
+    //Generators
+    function* rank(){
+      yield "first";
+      yield "second";
+      yield "third";
+    }
+    var school=rank();
+    console.log(school.next());
+    console.log(school.next());
+    console.log(school.next());
+    console.log(school.next());
+
+
+    /* To get values alone :
+    console.log(school.next().value);
+    console.log(school.next().value);
+    console.log(school.next().value);
+    console.log(school.next().value);    
+    */
+
+    //class syntax
+    class Laptop{
+      constructor(storage,os){
+        this.storage=storage;
+        this.os=os;
+      }
+      lapDetails(){
+        console.log(`storage ${this.storage} ram ${this.os}`);
+      }
+    }
+    var myLaptop=new Laptop("520GB","Windows");
+    myLaptop.lapDetails();
+
+
+
+
+
+  </script>
+</body>
+</html>

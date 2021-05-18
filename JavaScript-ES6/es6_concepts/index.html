@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <script type="text/babel">
+        function userName(fName){
+          console.log("Welcome "+fName);
+          console.log(`Welcome ${fName}`)//template string
+        }
+        userName("Buddies!");
+
+        function sum(a,b){
+          console.log(`Sum of Two numbers: 
+                       The value of a is ${a}
+                       The value of b is ${b}
+                       Sum of a and b is ${a+b}`);
+        }
+        sum(5,5);
+        sum(3,4);
+
+        var beverages=["Tea","Coffee","Wine","Caffeine"];
+        var chocolates=["Dairy Milk","5 star","KitKat","Perk"];
+        var juices=["Rose Milk",...chocolates,"Milk Shake",...beverages,"Badam Milk"];
+        console.log(juices);//spread operator example.
+
+        function valueOfNo(a=9,b=9){//default function
+          console.log(`The value of a is ${a} and The value of b is ${b}`);
+        }
+        valueOfNo();
+
+        //object literals
+        var object={ 
+          alarm:function(times){
+            console.log(Array(times).join("Waterfall "));
+          },
+          notification:function(times){
+            console.log(Array(times).join("CrystalClear "));
+          },
+        }
+        console.log(object.alarm(3));
+        console.log(object.notification(4));
+
+        var ring={
+          ringtone:function(times){
+            console.log(Array(times+1).join("Ripples "));
+          }
+        }
+        console.log(ring.ringtone(5));
+
+        var mobile={
+          android(times){
+            console.log("Vivo ".repeat(times));
+          },
+          iphone(times){
+            console.log("Apple ".repeat(times));
+          }
+        }
+        console.log(mobile.android(6));
+        console.log(mobile.iphone(4));
+
+        //Arrow functions
+        var electronics=function(electList){
+          console.log(electList);
+        }
+        console.log(["refridgerator","AC","TV"]);//normal function
+
+
+        var electronics=(electList)=>console.log(electList);
+        console.log(["refridgerator","AC","TV"]);//arrow function
+
+        //arrow functions using this
+        var person={
+          name:"Hema",
+          hobbies:["drawing","reading","teaching"],
+          printHobby(){
+            this.hobbies.forEach(hobbies=>{
+              var str=this.name+" likes "+hobbies;
+              console.log(str);
+            });
+          }
+        }
+        person.printHobby();
+  </script>
+  
+</body>
+</html>
